@@ -1,3 +1,14 @@
+:root {
+  --text-color: #101818;
+  --background-color: #f9fbfb;
+  --background-second-color: #fcfdfd;
+  --button-color: #3eb6ae;
+  --button-hover-color: #31908a;
+  --border-color: #9dbebe;
+
+  --shadow: #5fc8c1;
+  --border: 1px solid var(--border-color);
+}
 body, header, nav, h1, h2, h3, h4, h5, h6, p, ul, li, a, button, span, footer {
   margin: 0;
   padding: 0;
