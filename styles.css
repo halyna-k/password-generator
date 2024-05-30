@@ -1,12 +1,12 @@
 :root {
   --text-color: #101818;
-  --text-second-color: #f9fbfb;
+  --background-second-color: #f9fbfb;
   --background-color: #f7fcfc;
   --button-color: #3eb6ae;
   --button-hover-color: #31908a;
   --border-color: #9dbebe;
 
-  --shadow: #5fc8c1;
+  --shadow: 0 0 20px #3eb6b080;
   --border: 1px solid var(--border-color);
 }
 * {
@@ -20,9 +20,39 @@ body, header, nav, h1, h2, h3, h4, h5, h6, p, ul, li, a, button, span, footer {
   margin: 0;
   padding: 0;
 }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--background-color);
+}
+header {
+  padding: 0 0 20px 0;
+}
+h1 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+.container {
+  margin-top: 20px;
+  padding: 20px;
+  border: var(--border);
+  border-radius: 1.25rem;
+  background: var(--background-second-color);
+  box-shadow: var(--shadow);
+}
 
 @media screen and (min-width: 768px) {
   * {
     font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 1.5rem;
   }
 }
