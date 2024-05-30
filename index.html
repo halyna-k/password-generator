@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <meta name="description" content="Secure password generator to create strong passwords of varying lengths and complexities.">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <section>
+            <label for="password"></label>
+            <input type="text" id="password" aria-label="Generated Password">
+            <div>
+                <button type="button" aria-label="Copy password" onclick="">
+                    <span style="font-size: medium;">&#128203;</span>
+                </button>
+                <button type="button" aria-label="Generate new password" onclick="">
+                    <span style="font-size: x-large;">&#10227;</span>
+                </button>
+            </div>
+            <div id="strength" aria-live="polite"></div>
+        </section>
+        <section>
+            <label for="lengthSlider">Length: <span id="lengthValue">12</span></label>
+            <input type="range" id="lengthSlider" min="6" max="32" value="12" oninput="">
+        </section>
+        <fieldset>
+            <legend>Character Types</legend>
+            <div>
+                <label>
+                    <input type="radio" name="characterType" id="includeAll" onclick="">
+                    All characters
+                    <span title="Includes lowercase, uppercase, numbers, and special symbols.">?</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="characterType" id="easyToSay" onclick="">
+                    Easy to say
+                    <span title="Avoids numbers and special characters, making it easier to pronounce.">?</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="characterType" id="easyToRead" onclick="">
+                    Easy to read
+                    <span title="Avoids ambiguous characters like 1, l, 0, and O.">?</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id="includeLowerCase" checked>
+                    Lowercase
+                </label>
+                <label>
+                    <input type="checkbox" id="includeUpperCase" checked>
+                    Uppercase
+                </label>
+                <label>
+                    <input type="checkbox" id="includeNumbers" checked>
+                    Numbers
+                </label>
+                <label>
+                    <input type="checkbox" id="includeSymbols" checked>
+                    Special symbols
+                </label>
+            </div>
+        </fieldset>
+        <section>
+            <button type="button" onclick="">Generate</button>
+            <button type="button" onclick="">Copy</button>
+        </section>
+    </main>
+</body>
+</html>
